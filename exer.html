@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <input type="number" id="hindi" placeholder="enter hindi marks"><br>
+        <input type="number" id="math" placeholder="enter math marks"><br>
+        <input type="number" id="english" placeholder="enter english marks"><br>
+        <input type="number" id="sci" placeholder="enter sci marks"><br>
+        <input type="number" id="socialsci" placeholder="enter socialsci marks"><br>
+        <input type="number" id="sanskrit" placeholder="enter sanskrit marks"><br>
+
+        <input type="text" placeholder="enterstudmarks" id="marks">
+        <button onclick="result()">result</button>
+
+    </center>
+    <script>
+        function result(){
+            var hindi = document.getElementById('hindi').value;
+            var math = document.getElementById('math').value;
+            var english = document.getElementById('english').value;
+            var sci = document.getElementById('sci').value;
+            var socialsci = document.getElementById('socialsci').value;
+            var sanskrit = document.getElementById('sanskrit').value;
+
+            var studmarks = parseInt(hindi)+parseInt(math)+parseInt(english)+parseInt(sci)+parseInt(socialsci)+parseInt(sanskrit);
+            // var studmarks = document.getElementById('marks').value;
+            alert(studmarks);
+
+            debugger
+            if(studmarks <=35){
+                alert("failed");
+            }
+            else if(studmarks>=36 && studmarks<=45){
+                alert("c grade");
+            }
+            else if(studmarks>=46 && studmarks<=60){
+                alert("b grade");
+            } else if(studmarks>=61 && studmarks<=75){
+                alert("a grade");
+            } else if(studmarks>=76 && studmarks<=100){
+                alert("a+ grade");
+            }
+            else{
+                alert("invalid number");
+            }
+
+        }
+    </script>
+</body>
+</html>

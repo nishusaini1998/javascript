@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="nishu" placeholder="">
+    <input type="number" id="nishu1" placeholder="">
+    <select id="nishu3">
+        <option>select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+
+
+    </select>
+    <button type="button" onclick="calculate()">calc</button>
+    <h2>calculate total amount: <span id="total"></span></h2>
+
+    <script>
+        function calculate(){
+            debugger
+            var totalamount = 0;
+            var nishu = document.getElementById('nishu').value;
+            var nishu1 = document.getElementById('nishu1').value;
+            var nishu3 = document.getElementById('nishu3').value;
+
+            var nishuint = parseInt(nishu);
+            var nishuint1 = parseInt(nishu1);
+
+            if("+"==nishu3){
+                totalamount = nishuint+nishuint1;
+            }
+            else if("-"==nishu3){
+                totalamount = nishuint-nishuint1;
+            }
+            else if("*"==nishu3){
+                totalamount = nishuint*nishuint1;
+            }
+            else if("/"==nishu3){
+                totalamount = nishuint/nishuint1;}
+            else {
+                alert("invaild");
+            }
+            
+            document.getElementById('total').innerHTML=totalamount;
+    
+
+        }
+    </script>
+    
+</body>
+</html>

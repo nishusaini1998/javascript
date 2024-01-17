@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <input type="text" placeholder="enter pancard" id="password"><br>
+        <button type="button" id="btn" onclick="checkpassword">save</button>
+    </center>
+    
+    
+
+    <script>
+     function checkpassword(){
+        debugger
+        var passdata = document.getElementById('password').value;
+        var pancardptrn = /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/;
+        // var btns = document.getElementById('btn').innerHTML=passdata;
+
+        if(pancardptrn.text(passdata)){
+            alert("valid");
+             var btns = document.getElementById('btn');
+           
+        }
+        else{
+            alert("not valid")
+             var btns = document.getElementById('btn');
+             
+        }
+        
+     }
+    
+    </script>
+</body>
+</html>

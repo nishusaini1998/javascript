@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <span id="data"></span>
+    <button type="button" onclick="generateaadar()">click</button>
+
+    <script>
+      
+function generateaadar() { 
+          var digits = '234567898734'; 
+          let aadar = ''; 
+          for (let i = 0; i < digits.length; i++ ) { 
+              aadar += digits[Math.floor(Math.random() *10)]; 
+          } 
+        
+          document.getElementById('data').innerHTML=aadar;
+
+      } 
+   
+        
+    
+    </script> 
+</body>
+</html>

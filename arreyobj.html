@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array List</title>
+    <style>
+        .box{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+      <div id="multiplebox">
+            
+      </div>
+      <script>
+            // var color1={
+            //     bgcolor:"yellow",
+            //     name:"car",
+            //     modal:"2024"       
+            // }
+           
+            // var color2={
+            //     bgcolor:"blue",
+            // }
+            // var color3={
+            //     bgcolor:"green",
+            // }
+            // var color4={
+            //     bgcolor:"black",
+            // }
+            // var color5={
+            //     bgcolor:"purple",
+            // }
+            // var color6={
+            //     bgcolor:"red",
+            // }
+            // var colors=[color1,color2,color3,color4,color5,color6];
+
+          
+             var car = {
+            name: "sfit",
+            modal: "2020",
+            price: "100"
+            
+           }
+            var car2 = {
+            name: "bolero",
+            modal: "2020",
+            price: "100"
+           }
+            var car3 = {
+            name: "fortuner",
+            modal: "2020",
+            price: "100"
+           }
+            var car4 = {
+            name: "alto",
+            modal: "2020",
+            price: "100"
+           }
+            var car5 = {
+            name: "eco",
+            modal: "2020",
+            price: "100"
+           }
+           var cars=[car,car2,car3,car4,car5];
+            var data="";
+            for(var i=0;i<cars.length;i++){
+            data+='<div class="box style="background-color: '+cars[i].name,modal,price+';"></div>';
+            }
+            document.getElementById('multiplebox').innerHTML=data;
+      </script>
+</body>
+</html>

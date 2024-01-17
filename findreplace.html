@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 id="hlo">india win the match</h1>  
+  <input type="text" id="find" placeholder="find"><br>
+  <input type="text" id="replace" placeholder="replace"><br>
+  <button type="button" onclick="btn()">click</button>
+
+
+  <script>
+    function btn(){
+        let texdata = document.getElementById('hlo').innerHTML;
+        let finddata = document.getElementById('find').value;
+        let replacedata = document.getElementById('replace').value;
+        document.getElementById('hlo').innerHTML= textdata.replace(finddata,replacedata);
+    }
+  </script>
+</body>
+</html>

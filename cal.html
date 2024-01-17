@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="price1" placeholder="price1">
+    <input type="text" id="price2" placeholder="price2">
+     
+        <select name="button" id="solv">
+            <option value="button">+</option>
+            <option value="button">-</option>
+            <option value="button">*</option>
+            <option value="button">/</option>
+        </select>
+        
+    
+    <button type="button" onclick="calculate()">click</button>
+    <h1>calculate total amount: <span id="total"></span></h1>
+
+
+    <script>
+        function calculate(){
+            var price1=document.getElementById('price1').value;
+            var price2=document.getElementById('price2').value;
+            
+            var priceint1=parseInt(price1);
+            var priceint2=parseInt(price2);
+            var totalamount=document.getElementById('solv').innerHTML
+
+            // var totalamont=priceint1+priceint2;
+            
+            document.getElementById('total').innerHTML=totalamont;
+
+        }
+    </script>
+</body>
+</html>

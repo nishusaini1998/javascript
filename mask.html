@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="mask.css">
+</head>
+<body>
+  <div class="form">
+    <h2>Credit Card Payment</h2>
+    <form>
+     
+        <input type="password" id="number" placeholder="Card number" onkeyup="btn()"><br>
+        <input type="password" id="holder" placeholder="Card holder's name" onkeyup="btn()"><br>
+          <input type="password" id="date" placeholder="MM/YY" onkeyup="btn()"><br>
+          <input type="password" id="cvv" placeholder="CVV" onkeyup="btn()"><br>
+      
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+  <div class="form2">
+    <form class="form3">
+    <input type="text" id="number2" placeholder="Card number"><br>
+    <input type="text" id="holder2" placeholder="Card holder's name"><br>
+      <input type="text" id="date2" placeholder="MM/YY"><br>
+      <input type="text" id="cvv2" placeholder="CVV"><br>
+    </form>
+  </div>
+ 
+  <script>
+    function btn(){
+      var check =document.getElementById("number").value;
+      if(check.length<=3){
+        document.getElementById("number2").value = check;
+      number2.style.color = "red";
+      
+      }
+      else if(length>=4){
+        document.getElementById("number2").value = check;
+      number2.style.color = "red";
+        alert("alert")
+      }
+      else{}
+//       var chack = ""
+//       for (let i = 0; i < 16; i++ ){
+//        chack += "i" ;
+// }
+      
+//       document.getElementById("number").value=chack;
+
+      var check =document.getElementById("holder").value;
+      document.getElementById("holder2").value = check;
+      holder2.style.color = "red";
+
+      var check =document.getElementById("date").value;
+      document.getElementById("date2").value = check;
+      date2.style.color = "red";
+
+      var check =document.getElementById("cvv").value;
+      document.getElementById("cvv2").value = check;
+      cvv2.style.color = "red";
+
+    }
+  </script>
+</body>
+</html>

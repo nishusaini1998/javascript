@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Credit Card Validation</title>
+        <!--Lisa Hergert's Extra Credit 1-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="extraCredit.js"></script>
+    </head>
+    <body>
+        <form name = "newForm">
+            <label for = "creditCard1">Card Number</label>
+            <input type = "text" name = "creditCard1" id = "creditCard1" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+            <label for = "creditCard2">Card Number</label>
+            <input type = "text" name = "creditCard2" id = "creditCard2" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+            <label for = "creditCard3">Card Number</label>
+            <input type = "text" name = "creditCard3" id = "creditCard3" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+            <label for = "creditCard4">Card Number</label>
+            <input type = "text" name = "creditCard4" id = "creditCard4" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+            <label for = "creditCard5">Card Number</label>
+            <input type = "text" name = "creditCard5" id = "creditCard5" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+            <label for = "creditCard6">Card Number</label>
+            <input type = "text" name = "creditCard3" id = "creditCard3" placeholder = "XXXX-XXXX-YYYY-AAAA"
+            onChange = "validateCreditCard()" /><br />
+        </form>
+
+        <script>
+             function validateCreditCard () {
+    for (var i = 1; i < 7; i++) {
+        var cardNumber = document.getElementById("creditCard" + i);
+
+        var pattern = new RegExp("[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[24680]{1}");
+        var res = pattern.test(cardNumber);
+
+        if (res) {
+            document.getElementById("message").style.color = 'green';
+            document.getElementById("message").innerHTML = "Card Number is Valid";
+            document.getElementById("creditCard" + i).style.color = "green";
+        } else {
+            document.getElementById("message").style.color = 'red';
+            document.getElementById("message").innerHTML = "Card Number is NOT valid";
+            document.getElementById("cardCard" + i).style.color = 'red';
+        }
+    }
+}
+        </script>
+    </body>
+</html>

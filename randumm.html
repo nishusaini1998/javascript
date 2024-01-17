@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="demo">value</p>
+    <input type="text">
+    <button type="button" onclick="generateOTP" id="demo">click</button> -->
+
+    <script>
+      // Function to generate OTP 
+function generateOTP() { 
+          
+          // Declare a digits variable  
+          // which stores all digits 
+          var digits = '0123456789'; 
+          let OTP = ''; 
+          for (let i = 0; i < 6; i++ ) { 
+              OTP += digits[Math.floor(Math.random() * 10)]; 
+          } 
+          return OTP; 
+      } 
+        
+      document.write("OTP of 6 digits: ") 
+      document.write( generateOTP() ); 
+    </script> 
+</body>
+</html>

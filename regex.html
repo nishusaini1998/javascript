@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <input type="password" placeholder="enter password" id="password" onkeyup="checkpassword()"><br>
+        <span id="msg"></span>
+        <button type="button" id="btn" disabled>save</button>
+    </center>
+
+
+    <script>
+        function checkpassword(){
+            var passdata = document.getElementById('password').value;
+            if(passdata.length>=8){
+                document.getElementById('msg').innerHTML="strong password";
+                // document.getElementById('msg').style.color = "green"; 
+                msg.style.color = "green";
+                
+
+                var btns = document.getElementById('btn');
+                btns.disabled = false ;
+            }
+            else{
+                document.getElementById('msg').innerHTML= "weekpassword";
+                // document.getElementById('msg').style.color = "red"; 
+                msg.style.color = "red";
+                btns.disabled = true;
+                
+            }
+        }
+
+
+      
+    </script>
+    </script>
+</body>
+</html>

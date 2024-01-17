@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <input type="number" id="hindi" placeholder="Enter Hindi Marks"><br>
+    <input type="number" id="math" placeholder="Enter math Marks"><br>
+    <input type="number" id="english" placeholder="Enter english Marks"><br>
+    <input type="number" id="sci" placeholder="Enter sci Marks"><br>
+    <input type="number" id="SocialSci" placeholder="Enter SocialSci Marks"><br>
+    <input type="number" id="Sanskrit" placeholder="Enter Sanskrit Marks"><br>
+    
+    <input type="text"  placeholder="Enter Std Marks" id="marks">
+ <button onclick="result()">Result</button>
+   </center>
+    <script>
+        function result(){
+            var hindi = document.getElementById('hindi').value;
+            var math = document.getElementById('math').value;
+
+            var english = document.getElementById('english').value;
+
+            var sci = document.getElementById('sci').value;
+
+            var SocialSci = document.getElementById('SocialSci').value;
+
+            var Sanskrit = document.getElementById('Sanskrit').value;
+
+            var StudMarks = parseInt(hindi)+parseInt(math)+
+            parseInt(english)+parseInt(sci)+parseInt(SocialSci)+parseInt(Sanskrit);
+// var StudMarks = document.getElementById('marks').value;
+alert(StudMarks);
+debugger
+      if(StudMarks<=35){
+         alert("Failed");
+      }   
+      else if(StudMarks>=36 && StudMarks<=45){
+        alert("C Grade");
+      } 
+      else if(StudMarks>=46 && StudMarks<=60){
+        alert("B Grade");
+      }
+      else if(StudMarks>=61 && StudMarks<=75){
+        alert("A Grade");
+      } 
+      else if(StudMarks>=76 && StudMarks<=100){
+        alert("A+ Grade");
+      }  
+      else{
+        alert("Invalid Number");
+      }
+
+        }
+    </script>
+</body>
+</html>

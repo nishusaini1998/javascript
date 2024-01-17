@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="repl()">click replace</button>
+    <button type="button" onclick="repll()">click all replace</button>
+    <h1 id="hlo">alwar is beautifull city</h1>
+    <h2 id="hlo2">hello alwar alwar is a wonderfull city</h2>
+
+
+    <script>
+        function repl(){
+            let textdata = document.getElementById('hlo').innerHTML;
+            document.getElementById('hlo').innerHTML = textdata.replace("beautifull", "wonderfull");
+
+
+        }
+        function repll(){
+            let textdata = document.getElementById('hlo2').innerHTML;
+            document.getElementById('hlo2').innerHTML = textdata.replaceall("alwar", "jaipur")
+        }
+    </script>
+
+</body>
+</html>

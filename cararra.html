@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .box{
+        width: 300px;
+        height: 200px;
+        float: left;
+        margin: 10px;
+    }
+</style>
+</head>
+<body onload="rndm()"> 
+<div id="data">
+ </div>
+
+<button type="button" onclick="rndm()">Number</button>
+<script>
+ function rndm(){
+    var alto ={
+        name:"Alto",
+        color:"blue",
+        image:"https://imgd-ct.aeplcdn.com/664x415/n/cw/ec/39013/alto-exterior-left-front-three-quarter.jpeg?isig=0&q=80"
+    }
+    var BMW ={
+        name:"BMW",
+        color:"green",
+        image:"https://imgd.aeplcdn.com/642x336/n/cw/ec/140591/x1-exterior-right-front-three-quarter-7.jpeg?isig=0&q=80"
+    }
+    var AUDI ={
+        name:"AUDI",
+        color:"yellow",
+        image:"https://imgd.aeplcdn.com/664x374/cw/ec/31252/Audi-A5-Right-Front-Three-Quarter-165509.jpg?wm=0&q=80"
+    }
+    var FORTUNER ={
+        name:"FORTUNER",
+        color:"black",
+        image:"https://financialexpresswpcontent.s3.amazonaws.com/uploads/2019/09/fortuner-trd-660.jpg"
+
+    }
+    var merceddes ={
+        name:"merceddes",
+        color:"yellow",
+        image:"https://imgd.aeplcdn.com/664x374/cw/ec/31252/Audi-A5-Right-Front-Three-Quarter-165509.jpg?wm=0&q=80"
+    }
+    var cars= [alto,BMW,AUDI,FORTUNER,merceddes];
+        for(var i=0; i<cars.length;i++){
+            console.log(cars[i]);
+            document.getElementById('data').innerHTML +="<div class='box' style=' background-color: "+cars[i].color+";'>"+cars[i].name+"<img src='"+cars[i].image+"' style='width:100%'></div>";
+        }
+ }       
+      
+</script>
+</body>
+</html>

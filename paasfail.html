@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+        <label for="marks">Enter Marks:</label>
+        <input type="number" id="marks" placeholder="Enter marks" required>
+
+        <button onclick="checkResult()">Check Result</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkResult() {
+    
+    const marks = parseFloat(document.getElementById("marks").value) || 0;
+
+
+    const passingThreshold = 50;
+
+    
+    const result = marks >= passingThreshold ? "first" : "second";
+
+
+    document.getElementById("result").innerHTML = `Result: ${result}`;
+}
+
+    </script>
+</body>
+</html>

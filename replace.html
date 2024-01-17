@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <p id="para">alwar is a beautifull city</p>
+    <input type="text" placeholder="Find" id="find"><br><br>
+    <input type="text" placeholder="Replace" id="replace"><br><br>
+    <button type="btn" onclick="replace()">replace</button><br><br>
+    <button type="btn" onclick="repl()">find</button>
+    </center>
+<script>
+    function replace(){
+        let texdata= document.getElementById('para').innerHTML;
+        let finddata = document.getElementById('find').value;
+        let replacedata = document.getElementById('replace').value;
+        document.getElementById('para').innerHTML= texdata.replace(finddata,replacedata);
+}
+function repl(){
+    let texdata = document.getElementById('para').innerHTML;
+        let finddata = document.getElementById('find').value;
+        let replacedata = document.getElementById('replace').value;
+        document.getElementById('para').innerHTML= texdata.replaceAll(finddata,replacedata);
+        // document.getElementById('para').innerHTML= texdata.find(replacedata,finddata);
+        // document.getElementById('para').innerHTML = texdata.finddata;
+
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <input type="text" id="pass">
+        <button type="button" onclick="checkpassword()">Check Password</button>
+    </center>
+    <script>
+     var stddetails= {
+        name:"Rahul",
+        class:'html'
+     }
+     var stddetails1= {
+        name:"Pratap",
+        class:'html'
+     }
+     var stddetails2= {
+        name:"Raman",
+        class:'html'
+     }
+     var allStd= [stddetails,stddetails1,stddetails2];
+     console.log(allStd);
+    //  document.getElementById('pass').value=allStd[0].name + " " + allStd[0].class;
+        for (let i = 0; i <allStd.length; i++) {
+           console.log(allStd[i].name + " " + allStd[i].class)            
+        }
+        
+    </script>
+</body>
+</html>
